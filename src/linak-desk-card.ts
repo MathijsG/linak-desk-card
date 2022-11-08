@@ -131,6 +131,11 @@ export class LinakDeskCard extends LitElement {
               <ha-icon icon="mdi:chevron-up"></ha-icon>
             </div>
             <div class="knob-button" 
+                  @touchstart='${this.stop}' 
+                  @mousedown='${this.stop}'>
+              <ha-icon icon="mdi:stop"></ha-icon>
+            </div>
+            <div class="knob-button" 
                   @touchstart=${this.goDown} 
                   @mousedown=${this.goDown} 
                   @touchend=${this.stop}
